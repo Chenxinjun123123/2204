@@ -1,0 +1,389 @@
+.sui-form {
+  margin-top: 15px;
+}
+
+.sui-form .input-prepend {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.sui-form .input-prepend input {
+  width: 258px;
+}
+
+.sui-nav .nav-tabs .tab-wraped > li {
+  width: 50%;
+}
+
+.sui-nav .nav-tabs .tab-wraped > li > a {
+  padding: 0;
+  font-size: 20px;
+  text-align: center;
+  line-height: 2;
+}
+
+.sui-nav.nav-tabs.tab-wraped > li.active > a {
+  padding-top: 0;
+  border-top: 1px solid #28a3ef;
+  color: #c8111a;
+}
+
+.sui-form .input-prepend .add-on {
+  width: 25px;
+  height: 22px;
+  background-color: #ccc;
+  *float: left;
+}
+.btn-danger {
+  padding: 6px;
+  border-radius: 0;
+  background-color: #c81623;
+  word-spacing: 4px;
+  font-size: 16px;
+  font-family: 微软雅黑;
+}
+.registerArea {
+  border: 1px solid #dfdfdf;
+  font-family: '微软雅黑';
+}
+
+.registerArea h3 {
+  margin: 0;
+  padding: 6px 15px;
+  border-bottom: 1px solid #dfdfdf;
+  background: #ececec;
+  color: #333;
+}
+
+h3 .go {
+  float: right;
+  font-size: 14px;
+}
+
+.btn-reg {
+  width: 270px;
+}
+
+.info {
+  margin: 40px auto;
+  width: 600px;
+}
+.control-group {
+  margin-top: 20px;
+}
+
+.control-label {
+  font-size: 14px;
+}
+
+.sui-form input[type='text'].input-xfat.input-xlarge,
+.sui-form input[type='password'].input-xfat.input-xlarge {
+  width: 250px;
+  height: 24px;
+  border: 1px solid #999;
+  border-radius: 0;
+}
+
+#submit {
+  padding: 5px 80px;
+  background-color: #c81523;
+  font-family: '微软雅黑';
+}
+
+.reg {
+  width: 221px;
+}
+
+.btn-danger {
+  padding: 6px;
+  border-radius: 0;
+  background-color: #c81623;
+  word-spacing: 4px;
+  font-size: 16px;
+  font-family: 微软雅黑;
+}
+
+.copyright {
+  text-align: center;
+  line-height: 24px;
+}
+
+.copyright ul li {
+  display: inline-block;
+  margin: 15px 0;
+  padding: 0 20px;
+  border-right: 1px solid #e4e4e4;
+  list-style-type: none;
+  *display: inline;
+  *zoom: 1;
+}
+
+.copyright ul li:last-child {
+  border-right: 0;
+}
+
+/* 修改部分代码 */
+
+.forget {
+  cursor: pointer;
+}
+
+.registration li {
+  list-style: none;
+  float: left;
+  margin-right: 20px;
+}
+
+.registration li a {
+  width: 34px;
+  height: 34px;
+  display: block;
+  background: url('../images/regetype.png') no-repeat -18px -7px;
+}
+
+.registration li:nth-child(2) a {
+  background-position: -70px -7px;
+}
+
+.registration li:nth-child(3) a {
+  background-position: -122px -7px;
+}
+
+.registration li:nth-child(4) a {
+  background-position: -175px -7px;
+}
+
+.registration > a {
+  float: right;
+  margin-top: 5px;
+}
+
+.tab-content.tab-wraped {
+  border-bottom: 0 none;
+}
+
+.registration {
+  padding-bottom: 25px;
+}
+
+.py-container.copyright a {
+  color: #666;
+}
+
+.sui-form.form-horizontal.controls input[type='checkbox'] {
+  background: url('../images/checked.png') no-repeat;
+}
+
+.sui-form {
+  margin: 0 0 18px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sui-form fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.sui-form legend {
+  display: block;
+  margin-bottom: 18px;
+  padding: 0;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+  color: #333;
+  font-size: 18px;
+  line-height: 36px;
+}
+
+.sui-form legend small {
+  color: #999;
+  font-size: 13.5px;
+}
+
+.sui-form .input-default {
+  display: inline-block;
+  padding: 2px 4px;
+  height: 18px;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  color: #555;
+  vertical-align: middle;
+  font-size: 12px;
+  line-height: 18px;
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+.sui-form .input-default:focus {
+  outline: 0;
+  outline: thin dotted\9;
+  border-color: #28a3ef;
+}
+.sui-form input[type='password'],
+.sui-form input[type='text'],
+.sui-form textarea {
+  display: inline-block;
+  padding: 2px 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  height: 18px;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  color: #555;
+  vertical-align: middle;
+  font-size: 12px;
+  line-height: 18px;
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+.sui-form input[type='password']:focus,
+.sui-form input[type='text']:focus,
+.sui-form textarea:focus {
+  outline: 0;
+  outline: thin dotted\9;
+  border-color: #28a3ef;
+}
+.sui-form textarea {
+  height: auto;
+  resize: none;
+}
+.sui-form input[type='checkbox'] {
+  width: 13px;
+  height: 13px;
+  vertical-align: middle;
+}
+.sui-form input[type='submit'] {
+  width: auto;
+}
+.sui-form input[type='checkbox']:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.sui-form input:-moz-placeholder,
+.sui-form textarea:-moz-placeholder {
+  color: #999;
+}
+.sui-form input:-ms-input-placeholder,
+.sui-form textarea:-ms-input-placeholder {
+  color: #999;
+}
+
+.sui-form input::-webkit-input-placeholder,
+.sui-form textarea::-webkit-input-placeholder {
+  color: #999;
+}
+.sui-form .input-xfat {
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  padding-right: 8px;
+  padding-left: 8px;
+  font-size: 14px;
+  line-height: 22px;
+}
+.sui-form .input-xlarge {
+  width: 350px;
+}
+.sui-form textarea.input-xlarge {
+  padding-right: 4px;
+  padding-left: 4px;
+  width: 340px;
+}
+.sui-form .control-label {
+  display: block;
+  line-height: 24px;
+}
+.sui-form.form-horizontal .control-label {
+  display: table-cell;
+  width: 96px;
+  vertical-align: middle;
+  text-align: right;
+}
+.sui-form.form-horizontal .control-group {
+  display: table;
+  margin-bottom: 18px;
+}
+.sui-btn {
+  display: inline-block;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  padding: 2px 14px;
+  border: 1px solid #e1e1e1;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background-color: #eee;
+  color: #333;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+  cursor: pointer;
+  filter: progid: DXImageTransform.Microsoft.gradient(enabled=false);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.btn-block {
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+}
+input[type='submit'].btn-block {
+  width: 100%;
+}
+.btn-xlarge {
+  padding: 4px 20px;
+  font-size: 14px;
+  line-height: 22px;
+}
+.btn-danger {
+  border: 1px solid #cc1c05;
+  background-color: #cc1c05;
+  color: #fff;
+  filter: progid: DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.btn-danger:focus,
+.btn-danger:hover {
+  border: 1px solid #ea5543;
+  background-color: #ed6a5a;
+  color: #fff;
+}
+.btn-danger:active {
+  border: 1px solid #d72c16;
+  background-color: #e8351f;
+}
+.btn-sbm {
+  width: 250px;
+}
+
+.form-ctn {
+  padding: 0 80px;
+}
