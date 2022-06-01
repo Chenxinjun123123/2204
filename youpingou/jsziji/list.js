@@ -3,7 +3,10 @@ class List{
         this.getGoodsData();
         //给ul绑定委托事件
     //    this.distribute();
-    this.$('.sort_list ul').addEventListener('click', this.skipLogin.bind(this))
+    this.$('.sort_list ul').addEventListener('click', this.skipLogin.bind(this));
+    window.addEventListener('scroll', this.lazyLoading.bind(this))
+    this.currentPage = 1;
+    this.lock = false;
     }
   
     //跳转到login页面
@@ -32,33 +35,44 @@ class List{
         let param = `id=${uId}&goodsId=${gId}`;
         axios.post('http://localhost:8888/cart/add',param).then(res=>{
           console.log(res);
-          layer.open({
-            title: '购物车'
-            ,content: '商品已加入要进入购物车吗?'
-            ,btn: ['不进入', '进入']
-            ,btn2: function(index, layero){
+          // layer.open({
+          //   title: '购物车'
+          //   ,content: '商品已加入要进入购物车吗?'
+          //   ,btn: ['不进入', '进入']
+          //   ,btn2: function(index, layero){
              
-              location.assign('./shopcart.html');
-            } 
-          });
+             
+          //   } 
+          // });
+          // location.assign('./phone.html');
           if(res.status == 200 && res.data.code == 401){
             layer.closeAll("page")
             location.assign('./login.html')
           }
+        }).then(res1=>{
+          // let param = `id=${gId}`
+          axios.get('http://localhost:8888/goods/item?id='+gId).then(res1=>{
+            // console.log(res1);
+            // console.log(gId);
+            // let token = localStorage.getItem('token')
+                location.assign('./phone.html?ReturnUrl=id='+gId)
+          })
         })
+          
+        
           
 
         }
     //获取数据渲染到页面中
-   async getGoodsData(){
+   async getGoodsData(page = 1){
     //发送请求获取商品
-     let {status,data}=await axios.get('http://localhost:8888/goods/list')
+     let {status,data}=await axios.get('http://localhost:8888/goods/list?current='+page)
      console.log(status,data);
     //片段是否获取成功 如果获取成功就渲染道页面中
     if(status != 200 && data.code != 1) return;
-        let html = '';
-        data.list.forEach(goods => {
-            html +=`
+          let html = ''
+         data.list.forEach((goods) => {
+          html +=  `
             <li data-id=${goods.goods_id}>
                 <img src="${goods.img_big_logo}" alt="" />
                 <div class="prise_char">
@@ -79,15 +93,40 @@ class List{
                   <div style="clear: both"></div>
                 </div>
                 <div class="buy">立即抢购</div>
-              
             </li>
           `
          
         });
-        this.$('.sort_list ul').innerHTML+=html
+        this.$('.sort_list ul').innerHTML +=html
     }
     //点击加入购物车
-    
+    /*******懒加载*********/
+    lazyLoading = () => {
+      
+      // 需要滚动条高度,可视区高度,实际内容高度
+      let top = document.documentElement.scrollTop;
+      // console.log(top, 't');
+      let cliH = document.documentElement.clientHeight;
+      // console.log(cliH, 'c');
+      let conH = this.$('.sort_list').offsetHeight;
+      // console.log(conH);
+      // 但滚动条高度+可视区的高度> 实际内容高度时,就加载新数据
+      if (top + cliH >  (conH + 100)) {
+        // 一瞬间就满足条件,会不停的触发数据加载,使用节流和防抖
+  
+        // 如果是锁着的,就结束代码执行
+        if (this.lock) return;
+        this.lock = true;
+        // 指定时间开锁,才能进行下次数据清除
+        setTimeout(() => {
+          this.lock = false;
+        }, 500)
+        // console.log(1111);
+        this.getGoodsData(this.currentPage++)
+      }
+      // window._proto_
+      // console.log(window.__proto__);
+    }
     $(ele){
         let res = document.querySelectorAll(ele);
         return res.length ==1 ?res[0]:res;

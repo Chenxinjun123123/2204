@@ -26,25 +26,26 @@
             <div class="control-group">
               <label class="control-label">用户名：</label>
               <div class="controls">
-                <input type="text" class="input-xfat input-xlarge" placeholder="用户名" />
+                <input type="text" class="input-xfat input-xlarge" id='username' placeholder="用户名" />
               </div>
             </div>
-            <div class="control-group">
-              <label class="control-label">邮箱：</label>
-              <div class="controls">
-                <input type="text" class="input-xfat input-xlarge" placeholder="邮箱" />
-              </div>
-            </div>
+           
             <div class="control-group">
               <label class="control-label">登录密码：</label>
               <div class="controls">
-                <input type="password" class="input-xfat input-xlarge" placeholder="设置登录密码" />
+                <input type="password" class="input-xfat input-xlarge"id='password' placeholder="设置登录密码" />
               </div>
             </div>
             <div class="control-group">
               <label class="control-label">确认密码：</label>
               <div class="controls">
-                <input type="password" class="input-xfat input-xlarge" placeholder="再次确认密码" />
+                <input type="password" class="input-xfat input-xlarge" id="rpassword" placeholder="再次确认密码" />
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">用户昵称：</label>
+              <div class="controls">
+                <input type="text" class="input-xfat input-xlarge" id='nickname' placeholder="邮箱" />
               </div>
             </div>
             <div class="control-group">
@@ -57,7 +58,7 @@
             <div class="control-group">
               <span class="control-label"></span>
               <div class="controls btn-reg">
-                <a class="sui-btn btn-block btn-xlarge btn-danger btn-sbm" href="login.html"
+                <a class="sui-btn btn-block btn-xlarge btn-danger btn-sbm"
                   >完成注册</a
                 >
               </div>
@@ -90,5 +91,7 @@
         </p>
       </div>
     </div>
+    <script src="./axios/dist/axios.js"></script>
+    <script src="./jsziji/register.js"></script>
   </body>
 </html>

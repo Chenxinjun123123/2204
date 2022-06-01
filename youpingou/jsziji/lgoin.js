@@ -29,7 +29,8 @@ getForm(e){
       // 将token和user保存到local
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('user_id', res.data.user.id);
-      // 如果有回调的地址,则跳转
+      // 如果有回调的地址,
+      location.assign('./index.html')
       if (this.url) {
         location.href = this.url;
             }
